@@ -81,4 +81,40 @@ header .navbar .navbar__logo > img {
   opacity: 0.6;
 }
 
+.how__title {
+  margin-top: 2.5rem;
+  margin-left: 5%;
+}
+.how__step {
+  width: 325px;
+  height: 73px;
+  display: flex;
+  margin: 1.5rem auto;
+  background-color: #F6F6F6;
+  text-align: center;
+  border-radius: 1rem;
+  box-shadow: 0 5px 5px #E6E6E6;
+}
+.how__step:last-child {
+  background-color: #F5EDFF;
+}
+.how__step:last-child i {
+  color: #9256dc;
+}
+.how__step:last-child {
+  margin-bottom: 4rem;
+}
+.how__step p {
+  margin: auto -1rem;
+}
+.how__step span {
+  padding: 6px 8px 5px 11px;
+  background-color: #9256dc;
+  color: white;
+  border-radius: 50%;
+}
+.how__step i {
+  margin: 0 1.5rem;
+}
+
 /*# sourceMappingURL=style.css.map */
