@@ -183,6 +183,7 @@ header .navbar .navbar__logo > img {
   }
 }
 .restaurants .restaurants__items .restaurant__item {
+  position: relative;
   height: 253px;
   width: 335px;
   display: grid;
@@ -198,6 +199,16 @@ header .navbar .navbar__logo > img {
 }
 .restaurants .restaurants__items .restaurant__item:last-child {
   margin-bottom: 50px;
+}
+.restaurants .restaurants__items .restaurant__item-badge {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  padding: 7px 10px;
+  background-color: #99E2D0;
+  color: #159374;
+  border-radius: 3px;
+  font-weight: 600;
 }
 .restaurants .restaurants__items .restaurant__item-img {
   grid-area: restaurant__item-img;
@@ -235,20 +246,74 @@ header .navbar .navbar__logo > img {
   font-size: 1.5rem;
   opacity: 0.6;
 }
-.restaurants .restaurants__items .restaurant__item-info-like:hover {
-  cursor: pointer;
-}
-
-.fa {
+.restaurants .restaurants__items .restaurant__item-info-like .fa {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: white;
 }
-
-.fa:hover {
+.restaurants .restaurants__items .restaurant__item-info-like .fa:hover {
   -webkit-text-stroke: 1px white;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(#9256dc, #ff7ad9);
   -webkit-background-clip: text;
+}
+.restaurants .restaurants__items .restaurant__item-info-like:hover {
+  cursor: pointer;
+}
+
+.spinner {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  background-color: #353535;
+  position: absolute;
+  transition: opacity 3.5s ease-out;
+  display: block;
+  opacity: 1;
+}
+
+.spinner {
+  opacity: 0;
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #fff transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
