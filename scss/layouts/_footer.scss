@@ -1,12 +1,11 @@
 .footer {
-  //margin-top: 50px;
   display: flex;
   flex-direction: column;
   background-color: #353535;
   height: 197px;
 
   &__brand {
-    margin: 5%;
+    margin: 1.5rem 0 1rem 5%;
     height: 28px;
 
     //background-image: url("./../../images/logo/ohmyfood@2x.svg");
@@ -28,12 +27,12 @@
 
       & i {
         width: 15px;
-        margin-right: 1rem;
-
+        margin-right: 0.5rem;
+        font-size: 0.875rem;
       }
-      //& i:last-child {
-      //  font-size: 12px;
-      //}
+
     }
+
   }
+
 }

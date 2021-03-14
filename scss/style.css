@@ -30,6 +30,10 @@ a {
   background: linear-gradient(#ff7ad9, #9256dc);
 }
 
+.btn:hover {
+  background: linear-gradient(#ff94e1, #a06be1);
+}
+
 .cta__btn {
   margin: 28px auto 55px;
 }
@@ -67,7 +71,7 @@ header .navbar .navbar__logo > img {
   height: 197px;
 }
 .footer__brand {
-  margin: 5%;
+  margin: 1.5rem 0 1rem 5%;
   height: 28px;
 }
 .footer__brand img {
@@ -84,7 +88,8 @@ header .navbar .navbar__logo > img {
 }
 .footer__links a i {
   width: 15px;
-  margin-right: 1rem;
+  margin-right: 0.5rem;
+  font-size: 0.875rem;
 }
 
 .navbar__arrow {
@@ -160,6 +165,22 @@ header .navbar .navbar__logo > img {
 }
 .restaurants .restaurants__items {
   margin: auto;
+}
+@media (min-width: 56.25em) and (max-width: 74.9375em) {
+  .restaurants .restaurants__items {
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+}
+@media (min-width: 75em) {
+  .restaurants .restaurants__items {
+    width: 69%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
 }
 .restaurants .restaurants__items .restaurant__item {
   height: 253px;
