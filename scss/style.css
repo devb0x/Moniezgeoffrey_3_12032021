@@ -117,10 +117,6 @@ header .navbar .navbar__logo > img {
   font-size: 0.875rem;
 }
 
-.navbar__arrow {
-  display: none;
-}
-
 .cta {
   height: 335px;
   background-color: #F6F6F6;
