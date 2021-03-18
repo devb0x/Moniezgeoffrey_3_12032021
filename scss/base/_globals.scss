@@ -18,6 +18,10 @@ body {
   font-family: $roboto;
 }
 
+main {
+  //height: 100%;
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -32,7 +36,7 @@ a {
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px transparent;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient($primary, $secondary);
   -webkit-background-clip: text;

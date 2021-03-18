@@ -28,7 +28,7 @@ a {
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px transparent;
   -webkit-text-fill-color: transparent;
   background: -webkit-linear-gradient(#9256dc, #ff7ad9);
   -webkit-background-clip: text;
@@ -71,10 +71,13 @@ a {
   border: none;
   border-radius: 25px;
   background: linear-gradient(#ff7ad9, #9256dc);
+  box-shadow: 0 5px 5px #C1C1C1;
+  transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
   background: linear-gradient(#ff94e1, #a06be1);
+  box-shadow: 0 5px 5px #a2a2a2;
 }
 
 .cta__btn {
@@ -178,6 +181,7 @@ header .navbar .navbar__logo > img {
   line-height: 1;
 }
 .cta__text {
+  width: 80%;
   margin: 0 auto;
   opacity: 0.6;
 }
@@ -258,7 +262,7 @@ header .navbar .navbar__logo > img {
   border-radius: 1rem;
   overflow: hidden;
   margin-bottom: 1rem;
-  box-shadow: 0 5px 5px #E6E6E6;
+  box-shadow: 0 5px 5px #C1C1C1;
 }
 .restaurants .restaurants__items .restaurant__item:last-child {
   margin-bottom: 50px;
@@ -319,11 +323,12 @@ header .navbar .navbar__logo > img {
   transform: scale(1.1);
 }
 .menu__list {
-  position: absolute;
+  position: relative;
   width: 100%;
   margin-top: -3rem;
   border-radius: 25px 25px 0 0;
   background-color: #EAEAEA;
+  padding-bottom: 1px;
 }
 .menu__list-title {
   font-family: "Shrikhand", cursive;
@@ -356,7 +361,7 @@ header .navbar .navbar__logo > img {
   width: 350px;
   margin: 14px auto 14px;
   background-color: white;
-  box-shadow: 0 5px 5px #E6E6E6;
+  box-shadow: 0 5px 5px #C1C1C1;
   padding: 20px 10px;
   border-radius: 1rem;
   height: 86px;
@@ -404,6 +409,10 @@ header .navbar .navbar__logo > img {
 .menu__list-category__item-info-price {
   margin-right: 1rem;
   font-weight: 600;
+}
+.menu .order__btn {
+  display: flex;
+  margin: 2rem auto 5rem;
 }
 
 /*# sourceMappingURL=style.css.map */
