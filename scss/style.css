@@ -24,13 +24,15 @@ a {
 .fa {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: transparent;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
 }
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 1px transparent;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient(#9256dc, #ff7ad9);
+  -webkit-text-stroke: 2px #9256dc;
+  background: #9256dc;
+  background: -webkit-gradient(linear, left bottom, right top, from(#ffd8da), to(#8500ff));
   -webkit-background-clip: text;
 }
 

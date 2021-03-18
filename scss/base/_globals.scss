@@ -18,10 +18,6 @@ body {
   font-family: $roboto;
 }
 
-main {
-  //height: 100%;
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
@@ -32,17 +28,21 @@ a {
 .fa {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: transparent;
+  background: transparent;
+  transition: all 0.5s ease-in-out;
 }
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 1px transparent;
-  -webkit-text-fill-color: transparent;
-  background: -webkit-linear-gradient($primary, $secondary);
+  -webkit-text-stroke: 2px $primary;
+  background: $primary;
+  background: -webkit-gradient(linear, left bottom, right top,
+                from(rgb(255, 216, 218)),
+                to(rgb(133, 0, 255)));
   -webkit-background-clip: text;
 }
 
-// animations
+// animations menu
 .menu__list-category__item {
   animation: opacity 1.6s;
   animation-fill-mode: forwards;
@@ -72,3 +72,4 @@ a {
 .menu__list-category__item:nth-of-type(5) {
   animation-delay: 1.5s;
 }
+
