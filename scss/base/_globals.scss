@@ -29,7 +29,8 @@ a {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: transparent;
   background: transparent;
-  transition: all 0.5s ease-in-out;
+  transition: background-position 1.5s ease-in-out;
+  -webkit-background-clip: text;
 }
 
 .fa:hover {
@@ -39,10 +40,11 @@ a {
   background: -webkit-gradient(linear, left bottom, right top,
                 from(rgb(255, 216, 218)),
                 to(rgb(133, 0, 255)));
+  background-position: 0 50px;
   -webkit-background-clip: text;
 }
 
-// animations menu
+// animations menu opacity
 .menu__list-category__item {
   animation: opacity 1.6s;
   animation-fill-mode: forwards;
@@ -71,5 +73,33 @@ a {
 
 .menu__list-category__item:nth-of-type(5) {
   animation-delay: 1.5s;
+}
+
+// animations adding recipe
+.fa-check-circle {
+  color: white;
+  transition-duration: 0.8s;
+  transition-property: transform;
+}
+
+.test {
+  position: absolute;
+  height: 86px;
+  width: 4rem;
+  top: 0;
+  right: 0;
+  transform: translateX(4rem);
+  background-color: $tertiary;
+  border-radius: 0 1rem 1rem 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu__list-category__item:hover {
+  .fa-check-circle {
+    transform: rotate(360deg);
+  }
+  .test {
+    transform: translateX(0);
+  }
 }
 
