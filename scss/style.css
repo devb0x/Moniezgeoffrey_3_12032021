@@ -67,13 +67,18 @@ a {
   animation-delay: 1.5s;
 }
 
+.fa-check-circle:before {
+  display: inline-block;
+  transition: 1s all;
+}
+
 .fa-check-circle {
   color: white;
   transition-duration: 0.8s;
   transition-property: transform;
 }
 
-.test {
+.slider {
   position: absolute;
   height: 86px;
   width: 4rem;
@@ -84,11 +89,19 @@ a {
   border-radius: 0 1rem 1rem 0;
   transition: all 0.5s ease-in-out;
 }
+.slider i {
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
 
-.menu__list-category__item:hover .fa-check-circle {
+.menu__list-category__item:hover i::before {
   transform: rotate(360deg);
 }
-.menu__list-category__item:hover .test {
+.menu__list-category__item:hover .slider {
+  display: inline-block;
   transform: translateX(0);
 }
 

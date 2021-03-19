@@ -76,13 +76,18 @@ a {
 }
 
 // animations adding recipe
+.fa-check-circle:before {
+  display: inline-block;
+  transition: 1s all;
+}
+
 .fa-check-circle {
   color: white;
   transition-duration: 0.8s;
   transition-property: transform;
 }
 
-.test {
+.slider {
   position: absolute;
   height: 86px;
   width: 4rem;
@@ -92,14 +97,23 @@ a {
   background-color: $tertiary;
   border-radius: 0 1rem 1rem 0;
   transition: all 0.5s ease-in-out;
+
+  & i {
+    display: inline-block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 
 .menu__list-category__item:hover {
-  .fa-check-circle {
+  i::before {
     transform: rotate(360deg);
   }
-  .test {
+
+  .slider {
+    display: inline-block;
     transform: translateX(0);
   }
 }
-
