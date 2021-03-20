@@ -138,7 +138,7 @@ a {
   margin-left: -30px;
   border-radius: 50%;
   border-top: 3px solid #9256dc;
-  border-right: 3px solid transparent;
+  border-right: 3px solid #9256dc;
   opacity: 1;
   animation: spinner 1.5s linear;
   animation-iteration-count: 2;
@@ -250,7 +250,7 @@ header .navbar .navbar__logo > img {
   margin: auto -1rem;
 }
 .how__step span {
-  padding: 6px 8px 5px 11px;
+  padding: 6px 8px 6px 11px;
   background-color: #9256dc;
   color: white;
   border-radius: 50%;
@@ -280,7 +280,7 @@ header .navbar .navbar__logo > img {
 }
 @media (min-width: 75em) {
   .restaurants .restaurants__items {
-    width: 69%;
+    width: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -371,6 +371,11 @@ header .navbar .navbar__logo > img {
     object-fit: cover;
   }
 }
+@media (min-width: 75em) {
+  .menu__img img {
+    height: 450px;
+  }
+}
 .menu__list {
   position: relative;
   width: 100%;
@@ -416,7 +421,7 @@ header .navbar .navbar__logo > img {
 }
 @media (min-width: 75em) {
   .menu__list-category {
-    flex-basis: 33%;
+    flex-basis: 25%;
   }
 }
 .menu__list-category-title {
