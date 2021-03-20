@@ -177,23 +177,18 @@ header .navbar .navbar__logo > img {
 }
 
 .footer {
-  display: flex;
-  flex-direction: column;
   background-color: #353535;
-  height: 197px;
-}
-.footer__brand {
-  margin: 1.5rem 0 1rem 5%;
-  height: 28px;
 }
 .footer__brand img {
   height: 28px;
+  margin: 1.5rem 5%;
 }
 .footer__links {
   display: flex;
   flex-direction: column;
   margin-left: 5%;
   line-height: 1.5;
+  padding-bottom: 1.5rem;
 }
 .footer__links a {
   color: white;
@@ -360,9 +355,21 @@ header .navbar .navbar__logo > img {
   width: 100%;
   margin-top: 1rem;
 }
+@media (min-width: 37.5em) {
+  .menu__img {
+    margin-top: 0;
+  }
+}
 .menu__img img {
   width: 100%;
   transform: scale(1.1);
+}
+@media (min-width: 37.5em) {
+  .menu__img img {
+    transform: unset;
+    height: 350px;
+    object-fit: cover;
+  }
 }
 .menu__list {
   position: relative;
@@ -372,11 +379,22 @@ header .navbar .navbar__logo > img {
   background-color: #EAEAEA;
   padding-bottom: 1px;
 }
+@media (min-width: 56.25em) {
+  .menu__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
 .menu__list-title {
   font-family: "Shrikhand", cursive;
   display: flex;
   margin: 1rem 5% 0;
   font-size: 26px;
+}
+@media (min-width: 56.25em) {
+  .menu__list-title {
+    width: 100%;
+  }
 }
 .menu__list-title h2 {
   font-size: 100%;
@@ -384,6 +402,22 @@ header .navbar .navbar__logo > img {
 .menu__list-title span {
   margin: auto 15px auto auto;
   opacity: 0.6;
+}
+@media (min-width: 56.25em) {
+  .menu__list-title span {
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 56.25em) {
+  .menu__list-category {
+    flex-basis: 40%;
+    margin-left: 5%;
+  }
+}
+@media (min-width: 75em) {
+  .menu__list-category {
+    flex-basis: 33%;
+  }
 }
 .menu__list-category-title {
   margin: 0 5%;
@@ -408,6 +442,9 @@ header .navbar .navbar__logo > img {
   box-shadow: 0 5px 5px #C1C1C1;
   padding: 20px 10px;
   border-radius: 1rem;
+}
+.menu__list-category__item:last-child {
+  margin-bottom: 2.5rem;
 }
 .menu__list-category__item:hover {
   cursor: pointer;
@@ -458,9 +495,13 @@ header .navbar .navbar__logo > img {
 .menu__list-category__item-info-price {
   font-weight: 600;
 }
+.menu .order {
+  display: flex;
+  background-color: #EAEAEA;
+}
 .menu .order__btn {
   display: flex;
-  margin: 2rem auto 5rem;
+  margin: 1rem auto 55px;
 }
 
 /*# sourceMappingURL=style.css.map */
