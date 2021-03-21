@@ -1,0 +1,198 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.cta {
+  height: 335px;
+  background-color: #F6F6F6;
+  text-align: center;
+
+  &__city {
+    background-color: #EAEAEA;
+    border-top: 3px solid #D2D2D2;
+    border-bottom: 3px solid #EAEAEA;
+
+    & i {
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    width: 66%;
+    margin: 42px auto 18px;
+    line-height: 1;
+  }
+
+  &__text {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.6;
+  }
+  
+}
+
+// section .how
+.how {
+
+  &__title {
+    margin-top: 2.5rem;
+    margin-left: 5%;
+  }
+
+  &__step {
+    width: 325px;
+    height: 73px;
+    display: flex;
+    margin: 1.5rem auto;
+    background-color: #F6F6F6;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: $lightShadow;
+
+    &:last-child {
+      background-color: #F5EDFF;
+
+      & i {
+        color: $primary;
+      }
+    }
+
+    &:last-child {
+      margin-bottom: 4rem;
+    }
+
+    & p {
+      margin: auto -1rem;
+    }
+
+    & span {
+      padding: 6px 8px 6px 11px;
+      background-color: $primary;
+      color: white;
+      border-radius: 50%;
+    }
+
+    & i {
+      margin: 0 1.5rem;
+    }
+
+  }
+}
+
+// section .restaurants
+
+.restaurants {
+  display: flex;
+  flex-direction: column;
+  background-color: #F6F6F6;
+
+  &__title {
+    margin-left: 5%;
+  }
+
+  .restaurants__items {
+    margin: auto;
+
+    @include for-tablet-landscape-only{
+      width: 90%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+    @include for-desktop-up{
+      width: 60%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+
+
+    .restaurant__item {
+      position: relative;
+      height: 253px;
+      width: 335px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 0.75fr 1fr;
+      gap: 0;
+      grid-template-areas:
+        "restaurant__item-img restaurant__item-img restaurant__item-img"
+        "restaurant__item-info restaurant__item-info restaurant__item-info "
+        ". . .";
+
+      background-color: white;
+      border-radius: 1rem;
+      overflow: hidden;
+      margin-bottom: 1rem;
+      box-shadow: $shadow;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
+
+      &-badge {
+        position: absolute;
+        top: 5%;
+        right: 5%;
+        padding: 7px 10px;
+        background-color: #99E2D0;
+        color: #159374;
+        border-radius: 3px;
+        font-weight: 600;
+      }
+
+      &-img {
+        grid-area: restaurant__item-img;
+
+        overflow: hidden;
+        height: 173px;
+
+        & img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: bottom;
+        }
+      }
+
+      &-info {
+        display: grid;
+        grid-template-columns: 1fr 1fr 0.25fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 0;
+        grid-template-areas:
+         "restaurant__item-info-title restaurant__item-info-title restaurant__item-info-like"
+         "restaurant__item-info-location restaurant__item-info-location restaurant__item-info-like";
+        grid-area: restaurant__item-info;
+
+        height: 3rem;
+        margin: 14px 20px auto 15px;
+
+        &-title {
+          grid-area: restaurant__item-info-title;
+
+          margin: auto 0;
+          font-weight: 600;
+        }
+
+        &-location {
+          grid-area: restaurant__item-info-location;
+
+          margin: auto 0;
+        }
+
+        &-like {
+          grid-area: restaurant__item-info-like;
+
+          margin: auto;
+          font-size: 1.5rem;
+          opacity: 0.6;
+        }
+
+      }
+
+    }
+    
+  }
+
+}

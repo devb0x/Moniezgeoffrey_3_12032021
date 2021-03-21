@@ -1,0 +1,184 @@
+@import "../utils/variables";
+@import "../utils/mixins";
+
+.menu {
+
+  &__img {
+    width: 100%;
+    margin-top: 1rem;
+
+    @include for-tablet-portrait-up {
+      margin-top: 0;
+    }
+
+    img {
+      width: 100%;
+      transform: scale(1.1);
+
+      @include for-tablet-portrait-up {
+        transform: unset;
+        height: 350px;
+        object-fit: cover;
+      }
+
+      @include for-desktop-up {
+        height: 450px;
+      }
+    }
+  }
+
+  &__list {
+    position: relative;
+    width: 100%;
+    margin-top: -3rem;
+    border-radius: 25px 25px 0 0;
+    background-color: #EAEAEA;
+    padding-bottom: 1px;
+
+    @include for-tablet-landscape-up {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &-title {
+      font-family: $shrikhand;
+      display: flex;
+      margin: 1rem 5% 0;
+      font-size: 26px;
+
+      @include for-tablet-landscape-up {
+        width: 100%;
+      }
+
+      & h2 {
+        font-size: 100%;
+      }
+      
+      & span {
+        margin: auto 15px auto auto;
+        opacity: 0.6;
+
+        @include for-tablet-landscape-up {
+          margin-left: 3rem;
+        }
+      }
+    }
+
+    &-category {
+
+      @include for-tablet-landscape-up {
+        flex-basis: 40%;
+        margin-left: 5%;
+      }
+
+      @include for-desktop-up {
+        flex-basis: 25%;
+      }
+
+      &-title {
+        margin: 0 5%;
+        text-transform: uppercase;
+
+        &:after {
+          margin-top: 0.5rem;
+          content: "";
+          display: block;
+          height: 3px;
+          width: 40px;
+          background-color: $tertiary;
+        }
+      }
+
+      &__item {
+        overflow: hidden;
+        opacity: 0;
+        position: relative;
+        width: 350px;
+        height: 86px;
+        margin: 14px auto 14px;
+        background-color: white;
+        box-shadow: $shadow;
+        padding: 20px 10px;
+        border-radius: 1rem;
+
+        &:last-child {
+          margin-bottom: 2.5rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+          transition: all 1s ease-in-out;
+
+          .menu__list-category__item-title, .menu__list-category__item-info {
+
+            &-recipe {
+              display: block;
+              white-space: nowrap;
+              width: 204px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+
+            &-price {
+              transform: translateX(-4rem);
+              animation: slider 0.5s linear;
+              @keyframes slider {
+                0% {
+                  transform: translateX(0rem);
+                }
+                25% {
+                  transform: translateX(-1rem);
+                }
+                50% {
+                  transform: translateX(-2rem);
+                }
+                75% {
+                  transform: translateX(-3rem);
+                }
+                100% {
+                  transform: translateX(-4rem);
+                }
+              }
+            }
+
+          }
+
+        }
+
+        &-title {
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+        }
+
+        &-info {
+          position: absolute;
+          display: flex;
+          justify-content: space-between;
+          top: 47px;
+          width: 90%;
+
+          &-recipe {
+            opacity: 0.6;
+          }
+
+          &-price {
+            font-weight: 600;
+          }
+
+        }
+
+      }
+    }
+  }
+
+  .order {
+    display: flex;
+    background-color: #EAEAEA;
+
+    &__btn {
+      display: flex;
+      margin: 1rem auto 55px;
+    }
+  }
+
+}
