@@ -24,18 +24,19 @@ a {
 .fa {
   -webkit-text-stroke: 2px black;
   -webkit-text-fill-color: transparent;
-  background: transparent;
-  transition: background-position 1.5s ease-in-out;
   -webkit-background-clip: text;
+  background-size: 100% 200%;
+  background-image: linear-gradient(to bottom, transparent, transparent);
+  -webkit-transition: background-position 1s;
+  -moz-transition: background-position 1s;
+  transition: background-position 1s;
 }
 
 .fa:hover {
   cursor: pointer;
   -webkit-text-stroke: 2px #9256dc;
-  background: #9256dc;
-  background: -webkit-gradient(linear, left bottom, right top, from(#ffd8da), to(#8500ff));
-  background-position: 0 50px;
-  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom, transparent, #9256dc, #ff7ad9);
+  background-position: 0 -100%;
 }
 
 .menu__list-category__item {
