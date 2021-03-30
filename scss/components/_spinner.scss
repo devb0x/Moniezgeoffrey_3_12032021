@@ -14,12 +14,22 @@
   border-top: 3px solid $primary;
   border-right: 3px solid $primary;
   opacity: 1;
-  animation: spinner 1.5s linear;
+  animation: spinner 2.5s linear forwards;
   animation-iteration-count: 2;
 }
 
 @keyframes spinner {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.9;
+  }
   to {
     transform: rotate(360deg);
+    opacity: 0;
   }
 }
