@@ -23,20 +23,18 @@ a {
 
 .fa {
   -webkit-text-stroke: 2px black;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, transparent, transparent);
-  -webkit-transition: background-position 1s;
-  -moz-transition: background-position 1s;
-  transition: background-position 1s;
+  color: transparent;
+  background-image: linear-gradient(to bottom left, transparent, #9258da, #cc68d9, #cc68d9);
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  transition: 1s ease all;
 }
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 2px #9256dc;
-  background-image: linear-gradient(to bottom, transparent, #9256dc, #ff7ad9);
-  background-position: 0 -100%;
+  background-position-y: 0;
+  -webkit-text-stroke-color: #9258da;
 }
 
 .menu__list-category__item {
@@ -114,13 +112,13 @@ a {
   font-weight: 600;
   border: none;
   border-radius: 25px;
-  background: linear-gradient(#ff7ad9, #9256dc);
+  background: linear-gradient(#cc68d9, #9258da);
   box-shadow: 0 5px 5px #C1C1C1;
   transition: all 0.3s ease-in-out;
 }
 
 .btn:hover {
-  background: linear-gradient(#ff94e1, #a06be1);
+  background: linear-gradient(#d37cde, #a06ddf);
   box-shadow: 0 5px 5px #a2a2a2;
 }
 
@@ -139,8 +137,8 @@ a {
   margin-top: -30px;
   margin-left: -30px;
   border-radius: 50%;
-  border-top: 3px solid #9256dc;
-  border-right: 3px solid #9256dc;
+  border-top: 3px solid #9258da;
+  border-right: 3px solid #9258da;
   opacity: 1;
   animation: spinner 1.5s linear;
   animation-iteration-count: 2;
@@ -243,7 +241,7 @@ header .navbar .navbar__logo > img {
   background-color: #F5EDFF;
 }
 .how__step:last-child i {
-  color: #9256dc;
+  color: #9258da;
 }
 .how__step:last-child {
   margin-bottom: 4rem;
@@ -253,7 +251,7 @@ header .navbar .navbar__logo > img {
 }
 .how__step span {
   padding: 6px 8px 6px 11px;
-  background-color: #9256dc;
+  background-color: #9258da;
   color: white;
   border-radius: 50%;
 }

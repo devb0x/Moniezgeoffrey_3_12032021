@@ -27,20 +27,18 @@ a {
 // icons heart
 .fa {
   -webkit-text-stroke: 2px black;
-  -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
-  background-size: 100% 200%;
-  background-image: linear-gradient(to bottom, transparent, transparent);
-  -webkit-transition: background-position 1s;
-  -moz-transition: background-position 1s;
-  transition: background-position 1s;
+  color: transparent;
+  background-image: linear-gradient(to bottom left, transparent, $primary, $secondary, $secondary);
+  background-position-y: 100px;
+  background-repeat: no-repeat;
+  transition: 1s ease all;
 }
 
 .fa:hover {
   cursor: pointer;
-  -webkit-text-stroke: 2px $primary;
-  background-image: linear-gradient(to bottom, transparent, $primary, $secondary);
-  background-position: 0 -100%;
+  background-position-y: 0;
+  -webkit-text-stroke-color: $primary;
 }
 
 // animations menu opacity
