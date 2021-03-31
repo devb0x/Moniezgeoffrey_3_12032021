@@ -1,35 +1,51 @@
 @import "../utils/variables";
 
+.spinner_bg {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #353535;
+  z-index: 1000;
+  animation: bg_opacity 2.5s linear forwards;
+}
+
 .spinner {
-  content: "";
-  box-sizing: border-box;
-  position: absolute;
-  top: 58%;
+  position: relative;
+  top: 50%;
   left: 50%;
-  width: 60px;
-  height: 60px;
-  margin-top: -30px;
-  margin-left: -30px;
+  width: 120px;
+  height: 120px;
+  margin-top: -60px;
+  margin-left: -60px;
   border-radius: 50%;
   border-top: 3px solid $primary;
-  border-right: 3px solid $primary;
-  opacity: 1;
+  border-right: 3px solid #915ad6;
+  border-bottom: 3px solid #8e5ad0;
+  z-index: 1000;
   animation: spinner 2.5s linear forwards;
   animation-iteration-count: 2;
 }
 
+
 @keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bg_opacity {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 1;
-  }
   99% {
-    opacity: 0.9;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
     opacity: 0;
+    z-index: 0;
+    height: 0;
+    width: 0;
   }
 }

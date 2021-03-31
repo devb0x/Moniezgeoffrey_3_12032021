@@ -43,10 +43,10 @@ a {
 
 // animations menu opacity
 .menu__list-category__item {
-  animation: opacity 1.6s;
+  animation: menu_list 1.6s;
   animation-fill-mode: forwards;
 
-  @keyframes opacity {
+  @keyframes menu_list {
     0% {
       display: none;
       opacity: 0;
