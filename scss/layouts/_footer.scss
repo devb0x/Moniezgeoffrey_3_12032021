@@ -1,12 +1,12 @@
 .footer {
-  //display: flex;
-  //flex-direction: column;
   background-color: #353535;
-  //height: 197px;
+
+  &-wrapper {
+    max-width: 1400px;
+    margin: auto;
+  }
 
   &__brand {
-    //margin: 1.5rem 0 1rem 5%;
-    //height: 28px;
 
     & img {
       height: 28px;

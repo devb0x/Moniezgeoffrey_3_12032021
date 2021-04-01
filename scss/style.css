@@ -15,6 +15,13 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+@media (min-width: 112.5em) {
+  main {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
 a {
   cursor: pointer;
   text-decoration: none;
@@ -178,10 +185,16 @@ header {
   height: 4rem;
   display: flex;
 }
+@media (min-width: 112.5em) {
+  header {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 header .navbar {
   position: relative;
   height: 100%;
-  width: 80%;
+  width: 90%;
   display: flex;
   margin: auto;
 }
@@ -202,6 +215,10 @@ header .navbar .navbar__logo > img {
 
 .footer {
   background-color: #353535;
+}
+.footer-wrapper {
+  max-width: 1400px;
+  margin: auto;
 }
 .footer__brand img {
   height: 28px;

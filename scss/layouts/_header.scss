@@ -1,12 +1,19 @@
+@import "../utils/mixins";
+
 header {
   position: relative;
   height: 4rem;
   display: flex;
 
+  @include for-big-desktop-up {
+    max-width: 1400px;
+    margin: auto;
+  }
+
   .navbar {
     position: relative;
     height: 100%;
-    width: 80%;
+    width: 90%;
     display: flex;
     margin: auto;
 
