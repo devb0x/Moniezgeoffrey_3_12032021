@@ -85,7 +85,8 @@
   background-color: #F6F6F6;
 
   &__title {
-    margin-left: 5%;
+    //margin-left: 5%;
+    margin: 2.5rem auto 2rem 5%;
 
     @include for-big-desktop-up {
       margin-left: 3%;
