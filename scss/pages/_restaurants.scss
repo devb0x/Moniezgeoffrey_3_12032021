@@ -2,6 +2,7 @@
 @import "../utils/mixins";
 
 .menu {
+  background-color: #EAEAEA;
 
   &__img {
     width: 100%;
@@ -38,6 +39,10 @@
     @include for-tablet-landscape-up {
       display: flex;
       flex-wrap: wrap;
+    }
+
+    @include for-big-desktop-up {
+      box-shadow: 0 5px 12px #a2a2a2;
     }
 
     &-title {
@@ -175,6 +180,10 @@
   .order {
     display: flex;
     background-color: #EAEAEA;
+
+    @include for-big-desktop-up {
+      margin-top: 5rem;
+    }
 
     &__btn {
       display: flex;

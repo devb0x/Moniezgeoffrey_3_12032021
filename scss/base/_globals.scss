@@ -19,19 +19,17 @@ body {
   font-family: $roboto;
 }
 
-main {
-
-  @include for-big-desktop-up {
-    max-width: 1400px;
-    margin: auto;
-  }
-
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
   color: black;
+}
+
+.wrapper-xl {
+  @include for-big-desktop-up {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 
 // icons heart

@@ -15,17 +15,17 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-@media (min-width: 112.5em) {
-  main {
-    max-width: 1400px;
-    margin: auto;
-  }
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
   color: black;
+}
+
+@media (min-width: 112.5em) {
+  .wrapper-xl {
+    max-width: 1400px;
+    margin: auto;
+  }
 }
 
 .fa {
@@ -221,12 +221,6 @@ header .navbar .navbar__logo > img {
 .footer {
   background-color: #353535;
 }
-@media (min-width: 112.5em) {
-  .footer {
-    max-width: 1400px;
-    margin: auto;
-  }
-}
 .footer-wrapper {
   max-width: 1400px;
   margin: auto;
@@ -403,6 +397,9 @@ header .navbar .navbar__logo > img {
   opacity: 0.6;
 }
 
+.menu {
+  background-color: #EAEAEA;
+}
 .menu__img {
   width: 100%;
   margin-top: 1rem;
@@ -440,6 +437,11 @@ header .navbar .navbar__logo > img {
   .menu__list {
     display: flex;
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 112.5em) {
+  .menu__list {
+    box-shadow: 0 5px 12px #a2a2a2;
   }
 }
 .menu__list-title {
@@ -556,6 +558,11 @@ header .navbar .navbar__logo > img {
 .menu .order {
   display: flex;
   background-color: #EAEAEA;
+}
+@media (min-width: 112.5em) {
+  .menu .order {
+    margin-top: 5rem;
+  }
 }
 .menu .order__btn {
   display: flex;

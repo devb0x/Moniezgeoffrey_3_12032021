@@ -3,10 +3,6 @@
 .footer {
   background-color: #353535;
 
-  @include for-big-desktop-up() {
-    max-width: 1400px;
-    margin: auto;
-  }
 
   &-wrapper {
     max-width: 1400px;
