@@ -411,11 +411,11 @@ header .navbar .navbar__logo > img {
 }
 .menu__img img {
   width: 100%;
-  transform: scale(1.1);
+  height: 250px;
+  object-fit: cover;
 }
 @media (min-width: 37.5em) {
   .menu__img img {
-    transform: unset;
     height: 350px;
     object-fit: cover;
   }
@@ -442,6 +442,7 @@ header .navbar .navbar__logo > img {
 @media (min-width: 112.5em) {
   .menu__list {
     box-shadow: 0 5px 12px #a2a2a2;
+    border-radius: 25px;
   }
 }
 .menu__list-title {

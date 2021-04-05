@@ -14,10 +14,10 @@
 
     img {
       width: 100%;
-      transform: scale(1.1);
+      height: 250px;
+      object-fit: cover;
 
       @include for-tablet-portrait-up {
-        transform: unset;
         height: 350px;
         object-fit: cover;
       }
@@ -43,6 +43,7 @@
 
     @include for-big-desktop-up {
       box-shadow: 0 5px 12px #a2a2a2;
+      border-radius: 25px;
     }
 
     &-title {
