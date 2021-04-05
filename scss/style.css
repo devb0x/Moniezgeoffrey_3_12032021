@@ -311,7 +311,12 @@ header .navbar .navbar__logo > img {
   background-color: #F6F6F6;
 }
 .restaurants__title {
-  margin-left: 3%;
+  margin-left: 5%;
+}
+@media (min-width: 112.5em) {
+  .restaurants__title {
+    margin-left: 3%;
+  }
 }
 .restaurants .restaurants__items {
   margin: auto;

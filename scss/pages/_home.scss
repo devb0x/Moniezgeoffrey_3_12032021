@@ -85,7 +85,11 @@
   background-color: #F6F6F6;
 
   &__title {
-    margin-left: 3%;
+    margin-left: 5%;
+
+    @include for-big-desktop-up {
+      margin-left: 3%;
+    }
   }
 
   .restaurants__items {
