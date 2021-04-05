@@ -216,6 +216,12 @@ header .navbar .navbar__logo > img {
 .footer {
   background-color: #353535;
 }
+@media (min-width: 112.5em) {
+  .footer {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
 .footer-wrapper {
   max-width: 1400px;
   margin: auto;
