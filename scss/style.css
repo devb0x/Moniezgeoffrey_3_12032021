@@ -133,6 +133,11 @@ a {
   margin: 28px auto 55px;
 }
 
+.btn-heart {
+  background: none;
+  border: none;
+}
+
 .spinner_bg {
   position: fixed;
   height: 100vh;
@@ -451,12 +456,13 @@ header .navbar .navbar__logo > img {
 .menu__list-title h2 {
   font-size: 100%;
 }
-.menu__list-title span {
+.menu__list-title button {
   margin: auto 15px auto auto;
   opacity: 0.6;
+  font-size: 1.5rem;
 }
 @media (min-width: 56.25em) {
-  .menu__list-title span {
+  .menu__list-title button {
     margin-left: 3rem;
   }
 }
